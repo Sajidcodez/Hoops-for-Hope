@@ -1,0 +1,237 @@
+html {
+    background-color: var(--bg-color);
+}
+
+body {
+    background-color: #D2CFF5;
+}
+
+.header-container{
+    background-color: #9793be;
+    font-family: monospace;
+    color: coral;
+    margin-top: 1px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    color: coral;
+    background-color: rgb(206, 167, 139);
+    font-size: 20px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 0px 5px 0px 5px;
+}
+
+#header-img {
+    margin-top: 50px;
+    margin-right: 35px ;
+    width: 350px;
+    max-width: 400px;
+}
+
+.header-item:nth-of-type(1) {
+    width: 100%;
+}
+
+.header-item:nth-of-type(2){
+    width: 100%;
+}
+
+
+.header-button {
+    background-color: palevioletred;
+    color: yellow;
+    font-family: monospace;
+    font-size: 23px;
+    border-radius: 10px;
+    border: transparent; /* could be none too */
+    cursor: pointer;
+    padding: 6px;
+}
+
+h3 {
+    color: rgb(241, 143, 77);
+    font-size: 25px;
+
+}
+
+#About_the_event {
+    font-size: 32px;
+    text-align: center;
+    font-style: italic;
+}
+
+#event-schedule {
+    justify-content: row;
+    text-align: center;
+    
+}
+
+#event-schedule_text {
+    color: rgb(241, 143, 77);
+}
+
+.description {
+    margin: 2px;
+    border: 2px solid transparent;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    background-color: rgb(221, 212, 231);
+}
+
+#p1 {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+#p2 {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.navbar ul {
+    z-index: 1000; /* Ensures the navbar is on top of other elements */
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 25px ;
+    background-color: rgb(118, 80, 179);
+}
+
+.navbar ul li {
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul li a, .navbar ul li button {
+    display: block;
+    text-decoration: none;
+    color: yellow;
+    text-align: center;
+    padding: 1px;
+}
+
+.navbar ul li a:hover, .navbar ul li button {
+    color: yellowgreen; 
+}
+
+.IMAGES {
+    max-width: 50%;
+    height: auto;
+}
+
+#darkModeButton {
+    display: inline;
+    background-color: black;
+    text-decoration: none;
+    color: yellow;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: black solid 10px;
+    border-radius: 15px;
+    height: 38px;
+}
+
+.rsvp-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.rsvp-para {
+    width: 55%;
+    padding-right: 10px;
+}
+
+.rsvp-participants {
+    width: 45%;
+    padding-right: 10px;
+}
+
+.dark-mode {
+    background-color: black ;
+    color: white;
+}
+
+.error {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    background-color: #ffe6e6;
+  }
+
+
+.modal {
+    display: none;   
+    position: fixed; 
+    z-index: 2;      
+    
+    
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    
+    background-color: rgba(0,0,0,0.4); 
+
+   
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container {
+    padding: 50px;
+    width: 55%;
+    background-color: #9793be;
+    color: coral;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: monospace;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#modal-image {
+    width: 100px;
+    height: auto;
+}
+
+#close-modal-btn {
+    margin-top: 20px;
+    background-color: palevioletred;
+    color: yellow;
+    font-family: monospace;
+    font-size: 18px;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+#close-modal-btn:hover {
+    background-color: #d84f7a;
+}
