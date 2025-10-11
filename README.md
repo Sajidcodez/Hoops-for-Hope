@@ -2,7 +2,7 @@
 
 A community-focused event website for the **Hoops for Hope Charity Game**, built using HTML, CSS, and JavaScript. This project was created to promote a real-world basketball charity event, manage RSVPs, and engage supporters online.
 
----
+🔗 --> [View Live Website](https://hoopsforhope.netlify.app/) 
 
 ## 🌟 Features
 
