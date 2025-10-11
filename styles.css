@@ -533,7 +533,12 @@
     padding: 5rem 0;
     background-color: var(--bg-alt);
   }
-  
+
+  /* center subheading and align contact card */
+  .contact {
+    text-align: center;
+  }
+
   .contact-card {
     display: block;
     background-color: var(--bg-card);
