@@ -40,8 +40,8 @@
                         <h1>Hoops for Hope Charity Game</h1>
                         <p id="subheading">Ballin for a Cause</p>
                         <div class="hero-buttons">
-                            <button type="button" class="btn btn-primary">Register</button>
-                            <button type="button" class="btn btn-secondary">Donate</button>
+                            <a href="#rsvp" class="btn btn-primary" aria-label="Jump to registration form">Register</a>
+                            <a href="#donate" class="btn btn-secondary" aria-label="Jump to donation section">Donate</a>
                         </div>
                     </div>
                 </div>
@@ -169,12 +169,58 @@
                 <a class="contact-card" href="https://sajidcodez.github.io/SajidCodez-Portfolio/">
                     <article>
                         <h3>Contact Sajid</h3>
-                        <p>This is totally not a shameless self promotion of his website</p>
+                        <p>Please allow him to assist you with any inquiries.
+                            <br>
+                            Navigate to his linkedin profile for direct messaging 
+                            <br>
+                            Don't forget to connect and follow!
+                            <br>
+                            Responses may take up to 24-48 hours.
+                        </p>
                     </article>
                 </a>
             </div>
         </section>
     </main>
+
+    <section id="donate" class="donation-section">
+        <div class="container">
+            <h2 class="section-title">Support Hoops for Hope</h2>
+            <div class="donation-grid">
+                <div class="donation-info">
+                    <p>Your support helps us cover venue costs, community outreach, and charitable donations. Choose an amount below or enter a custom donation. Every contribution makes a difference.</p>
+                    <ul class="donation-benefits">
+                        <li>100% of proceeds go to our partner charities</li>
+                        <li>Quick, secure donations</li>
+                        <li>Receive event updates and perks</li>
+                    </ul>
+                </div>
+
+                <div class="donation-form-card">
+                    <form id="donation-form">
+                        <div class="donation-amounts">
+                            <button type="button" class="btn amount" data-amount="25">$25</button>
+                            <button type="button" class="btn amount" data-amount="50">$50</button>
+                            <button type="button" class="btn amount" data-amount="100">$100</button>
+                            <button type="button" class="btn amount" data-amount="250">$250</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="custom-amount">Custom amount</label>
+                            <input id="custom-amount" name="custom-amount" type="number" min="1" placeholder="Enter amount in USD">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="donor-email">Email (receipt)</label>
+                            <input id="donor-email" name="donor-email" type="email" placeholder="you@example.com">
+                        </div>
+
+                        <button id="donate-button" class="btn btn-primary" type="submit">Donate securely</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">

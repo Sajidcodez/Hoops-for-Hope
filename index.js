@@ -105,3 +105,39 @@ const toggleModal = (person) => {
 const submitButton = document.getElementById("rsvp-button")
 submitButton.removeEventListener("click", addParticipant)
 submitButton.addEventListener("click", validateForm)
+
+// Donation form interactions
+const amountButtons = document.querySelectorAll('.btn.amount')
+const customAmountInput = document.getElementById('custom-amount')
+let selectedAmount = null
+
+amountButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    // toggle active on clicked button and clear others
+    amountButtons.forEach(b => b.classList.remove('active'))
+    btn.classList.add('active')
+    selectedAmount = btn.dataset.amount
+    if (customAmountInput) customAmountInput.value = selectedAmount
+  })
+})
+
+const donationForm = document.getElementById('donation-form')
+if (donationForm) {
+  donationForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const amount = customAmountInput && customAmountInput.value ? customAmountInput.value : selectedAmount
+    const email = document.getElementById('donor-email')?.value || ''
+
+    if (!amount || Number(amount) <= 0) {
+      // simple validation
+      alert('Please enter or select a valid donation amount.')
+      return
+    }
+
+    // show modal with thank you message (re-using toggleModal)
+    toggleModal({ name: email || 'Donor' })
+    donationForm.reset()
+    amountButtons.forEach(b => b.classList.remove('active'))
+    selectedAmount = null
+  })
+}

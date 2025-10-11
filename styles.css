@@ -41,6 +41,11 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* ensure anchor targets are visible under fixed header */
+  html {
+    scroll-padding-top: calc(var(--header-height) + 1rem);
+  }
   
   body {
     font-family: "Poppins", sans-serif;
@@ -618,6 +623,82 @@
   
     .video-container iframe {
       height: 250px;
+    }
+  }
+
+  /* Donation Section */
+  .donation-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, var(--bg-card), var(--bg-alt));
+  }
+
+  .donation-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .donation-info p {
+    margin-bottom: 1rem;
+  }
+
+  .donation-benefits {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .donation-benefits li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .donation-benefits li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+
+  .donation-form-card {
+    background-color: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  .donation-amounts {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .btn.amount {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+
+  .btn.amount:hover,
+  .btn.amount.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+  }
+
+  #donation-form .form-group input {
+    width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    .donation-grid {
+      grid-template-columns: 1fr;
     }
   }
   
